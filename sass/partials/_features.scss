@@ -50,20 +50,49 @@
 		}
 
 		.tab {
-			margin-top: 5rem;
+			margin-top: 4rem;
 			display: none;
-			align-items: center;
+			/* align-items: center; */
 			justify-content: space-between;
 			gap: 5rem;
 			flex-direction: column;
+			position: relative;
+
+			@media screen and (min-width: 768px) {
+				margin-top: 12rem;
+			}
+
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				z-index: -1;
+				background: $blue;
+				border-radius: 50rem;
+				width: 50rem;
+				height: 20.3rem;
+				top: 10px;
+				left: -25rem;
+
+				@media screen and (min-width: 768px) {
+					top: -35px;
+					left: -700px;
+					width: 1200px;
+					height: 500px;
+				}
+			}
 
 			img {
 				max-width: 53.6rem;
-				max-height: 39.3rem;
-				object-fit: cover;
+				object-fit: contain;
+
+				@media screen and (min-width: 768px) {
+					height: 46.6rem;
+				}
 			}
 
 			h2 {
+				margin-top: 5rem;
 				color: $blue-dark;
 				font-size: 2.4rem;
 				line-height: 52px;

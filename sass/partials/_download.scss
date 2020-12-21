@@ -1,0 +1,59 @@
+.download {
+	padding: 5rem 0;
+
+	@media screen and (min-width: 768px) {
+		padding: 12rem 0;
+	}
+
+	&__title {
+		max-width: 40rem;
+		margin: 0 auto;
+		text-align: center;
+		h2 {
+			color: $blue-dark;
+			font-size: 2.4rem;
+			margin-bottom: 2.5rem;
+		}
+
+		p {
+			font-size: 1.5rem;
+			color: $gray-dark;
+		}
+	}
+
+	&__cards {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-top: 5rem;
+		gap: 5rem;
+
+		@media screen and (min-width: 768px) {
+			flex-direction: row;
+			padding-top: 10rem;
+		}
+
+		.card {
+			box-shadow: 0 2px 5px rgba($color: #000000, $alpha: 0.1);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 2rem;
+			width: 28rem;
+			padding: 5rem 0;
+
+			.logo {
+				width: 10rem;
+			}
+		}
+
+		.up {
+			transform: translateY(-40px);
+		}
+
+		.down {
+			transform: translateY(40px);
+		}
+	}
+}

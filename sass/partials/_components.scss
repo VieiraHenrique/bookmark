@@ -1,0 +1,26 @@
+.btn {
+	padding: 2rem 1.8rem;
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 0.5rem;
+	font-size: 1.4rem;
+	@media screen and (min-width: 768px) {
+		padding: 2rem 2.5rem;
+	}
+}
+
+.btn-blue {
+	background: $blue;
+	color: $white;
+}
+
+.btn-white {
+	background: $gray;
+	color: $blue-dark;
+	box-shadow: 0 2px 5px rgba($color: #5267df, $alpha: 0.3);
+}
+
+.btn-outline {
+	border: 2px solid $white;
+	color: $white;
+}

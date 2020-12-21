@@ -1,0 +1,98 @@
+.hero {
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@media screen and (max-width: 768px) {
+			overflow: hidden;
+		}
+
+		@media screen and (min-width: 768px) {
+			flex-direction: row;
+			gap: 4rem;
+			padding-top: 10rem;
+		}
+
+		@media screen and (min-width: 1024px) {
+			gap: 9rem;
+		}
+	}
+
+	&__text {
+		order: 1;
+		flex-basis: 50%;
+		text-align: center;
+		h1 {
+			color: $blue-dark;
+			font-size: 3rem;
+			margin-bottom: 3rem;
+		}
+
+		p {
+			color: $gray-dark;
+			margin-bottom: 3.5rem;
+		}
+
+		&--btn {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		@media screen and (min-width: 768px) {
+			order: 0;
+			text-align: left;
+
+			h1 {
+				font-size: 4.8rem;
+				letter-spacing: -0.15;
+			}
+
+			p {
+				font-size: 1.8rem;
+			}
+
+			&--btn {
+				justify-content: flex-start;
+				gap: 1.5rem;
+			}
+		}
+	}
+
+	&__img {
+		order: 0;
+		height: 33rem;
+		display: flex;
+		align-items: center;
+		position: relative;
+		margin: -2rem;
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 500px;
+			height: 203px;
+			border-radius: 1000rem;
+			background: $blue;
+			top: 8rem;
+			right: -200px;
+			z-index: -1;
+
+			@media screen and (min-width: 768px) {
+				height: 500px;
+				top: -100px;
+				width: 1000px;
+				right: -600px;
+			}
+
+			@media screen and (min-width: 1024px) {
+				top: -60px;
+			}
+		}
+
+		@media screen and (min-width: 768px) {
+			height: fit-content;
+		}
+	}
+}

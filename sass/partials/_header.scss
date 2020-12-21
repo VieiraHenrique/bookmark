@@ -1,0 +1,119 @@
+.header {
+	position: sticky;
+	top: 0;
+	z-index: 10000;
+	background: #fff;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 10rem;
+	}
+
+	&__logo {
+		.logo {
+			display: block;
+			background: url(/img/logo-bookmark.svg);
+			background-size: cover;
+			width: 15rem;
+			height: 2.5rem;
+		}
+	}
+
+	&__nav {
+		.hamburger {
+			width: 1.8rem;
+			height: 1.5rem;
+			background: url(/img/icon-hamburger.svg);
+
+			@media screen and (min-width: 768px) {
+				display: none;
+			}
+		}
+
+		ul {
+			/* padding-top: 4rem; */
+			position: fixed;
+			top: 10rem;
+			left: 0;
+			height: calc(100vh - 10rem);
+			width: 100vw;
+			background: rgba($color: #242a45, $alpha: 0.9);
+			display: none;
+			justify-content: flex-start;
+			align-items: center;
+			flex-direction: column;
+			gap: 2.5rem;
+
+			li {
+				.btn {
+					padding: 2rem 14rem;
+				}
+			}
+
+			a {
+				color: $white;
+				text-transform: uppercase;
+			}
+
+			.line {
+				width: 90%;
+				height: 1px;
+				background: $gray;
+			}
+
+			@media screen and (min-width: 768px) {
+				all: unset;
+				list-style: none;
+				display: flex;
+				align-items: center;
+				gap: 5rem;
+
+				li {
+					a {
+						font-size: 1.3rem;
+					}
+
+					.btn {
+						padding: 1rem 2rem;
+						background: $red;
+						color: $white;
+					}
+				}
+
+				.line {
+					display: none;
+				}
+
+				a {
+					color: $blue-dark;
+				}
+			}
+		}
+
+		.open {
+			display: flex;
+		}
+	}
+}
+
+.mobile-open {
+	.container {
+		background: rgba($color: #242a45, $alpha: 0.9);
+	}
+
+	.logo {
+		display: block;
+		background: url(/img/logo-bookmark-white.svg);
+		background-size: cover;
+		width: 15rem;
+		height: 2.5rem;
+	}
+
+	.hamburger {
+		width: 1.485rem;
+		height: 1.484rem;
+		background: url(/img/icon-close.svg);
+		background-size: cover;
+	}
+}

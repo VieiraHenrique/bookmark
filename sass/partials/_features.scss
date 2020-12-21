@@ -1,0 +1,137 @@
+.features {
+	padding-top: 15rem;
+	text-align: center;
+	padding-bottom: 4.5rem;
+
+	&__title {
+		max-width: 40rem;
+		margin: 0 auto;
+		h2 {
+			color: $blue-dark;
+			font-size: 2.4rem;
+			margin-bottom: 2.5rem;
+		}
+
+		p {
+			font-size: 1.5rem;
+			color: $gray-dark;
+		}
+	}
+
+	&__tabs {
+		margin-top: 5rem;
+		input {
+			display: none;
+		}
+		margin-top: 5rem;
+		border-top: 1px solid $gray-dark;
+
+		@media screen and (min-width: 768px) {
+			border-top: none;
+
+			.labels {
+				margin: 0 auto;
+				width: 45%;
+				border-bottom: 1px solid $gray-dark;
+			}
+		}
+
+		label {
+			cursor: pointer;
+			position: relative;
+			display: block;
+			padding: 2rem;
+			border-bottom: 1px solid $gray-dark;
+
+			@media screen and (min-width: 768px) {
+				display: inline-block;
+				border: none;
+			}
+		}
+
+		.tab {
+			margin-top: 5rem;
+			display: none;
+			align-items: center;
+			justify-content: space-between;
+			gap: 5rem;
+			flex-direction: column;
+
+			img {
+				max-width: 53.6rem;
+				max-height: 39.3rem;
+				object-fit: cover;
+			}
+
+			h2 {
+				color: $blue-dark;
+				font-size: 2.4rem;
+				line-height: 52px;
+			}
+
+			p {
+				color: $gray-dark;
+				margin-bottom: 2rem;
+				max-width: 37.5rem;
+			}
+
+			@media screen and (min-width: 768px) {
+				text-align: left;
+				flex-direction: row;
+			}
+		}
+	}
+}
+
+#bookmarking:checked ~ .bookmarking {
+	display: flex;
+}
+#bookmarking:checked ~ .labels [for='bookmarking'] {
+	&::after {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 50%;
+		height: 3px;
+		background: $red;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+#searching:checked ~ .searching {
+	display: flex;
+}
+
+#searching:checked ~ .labels [for='searching'] {
+	&::after {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 50%;
+		height: 3px;
+		background: $red;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+#sharing:checked ~ .sharing {
+	display: flex;
+}
+
+#sharing:checked ~ .labels [for='sharing'] {
+	&::after {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 50%;
+		height: 3px;
+		background: $red;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}

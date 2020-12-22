@@ -1,0 +1,73 @@
+.faq {
+	padding: 5rem 0 10rem;
+	&__title {
+		text-align: center;
+		max-width: 42rem;
+		margin: 0 auto;
+		h2 {
+			color: $blue-dark;
+			font-size: 2.4rem;
+			margin-bottom: 2.5rem;
+		}
+
+		p {
+			font-size: 1.5rem;
+			color: $gray-dark;
+		}
+	}
+
+	&__accordion {
+		max-width: 54rem;
+		margin: 4rem auto 0;
+		border-top: 1px solid $gray-dark;
+		&--item {
+			padding: 2rem 0;
+			border-bottom: 1px solid $gray-dark;
+
+			.accordion-link {
+				font-size: 1.8rem;
+				color: $blue-dark;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.fa-chevron-down {
+				color: $blue;
+			}
+
+			.fa-chevron-up {
+				color: $red;
+				display: none;
+			}
+
+			.answer {
+				margin: 1rem 0 0;
+				color: $gray-dark;
+				overflow: hidden;
+				max-height: 0;
+				line-height: 2;
+				opacity: 0;
+				transition: opacity 1s ease;
+			}
+		}
+
+		&--item:target .answer {
+			max-height: 20rem;
+			opacity: 1;
+		}
+		&--item:target .fa-chevron-down {
+			display: none;
+		}
+		&--item:target .fa-chevron-up {
+			display: block;
+		}
+	}
+
+	.btn {
+		display: block;
+		text-align: center;
+		margin: 5rem auto 0;
+		max-width: fit-content;
+	}
+}

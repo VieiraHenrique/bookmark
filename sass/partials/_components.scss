@@ -4,6 +4,7 @@
 	cursor: pointer;
 	border-radius: 0.5rem;
 	font-size: 1.4rem;
+	border: 2px solid transparent;
 	@media screen and (min-width: 768px) {
 		padding: 2rem 2.5rem;
 	}
@@ -12,12 +13,22 @@
 .btn-blue {
 	background: $blue;
 	color: $white;
+
+	&:hover {
+		background: #fff;
+		border: 2px solid $blue;
+		color: $blue;
+	}
 }
 
 .btn-white {
 	background: $gray;
 	color: $blue-dark;
 	box-shadow: 0 2px 5px rgba($color: #5267df, $alpha: 0.3);
+	&:hover {
+		background: #fff;
+		border: 2px solid $gray-dark;
+	}
 }
 
 .btn-outline {

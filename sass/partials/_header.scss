@@ -72,12 +72,21 @@
 				li {
 					a {
 						font-size: 1.3rem;
+
+						&:hover {
+							color: $red;
+						}
 					}
 
 					.btn {
 						padding: 1rem 2rem;
 						background: $red;
 						color: $white;
+
+						&:hover {
+							background: #fff;
+							border: 2px solid $red;
+						}
 					}
 				}
 

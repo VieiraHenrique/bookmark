@@ -4,7 +4,7 @@
 	padding-bottom: 4.5rem;
 
 	&__title {
-		max-width: 40rem;
+		max-width: 42rem;
 		margin: 0 auto;
 		h2 {
 			color: $blue-dark;
@@ -13,7 +13,7 @@
 		}
 
 		p {
-			font-size: 1.5rem;
+			font-size: 1.6rem;
 			color: $gray-dark;
 		}
 	}
@@ -31,7 +31,7 @@
 
 			.labels {
 				margin: 0 auto;
-				width: 45%;
+				width: 60%;
 				border-bottom: 1px solid $gray-dark;
 			}
 		}
@@ -40,7 +40,9 @@
 			cursor: pointer;
 			position: relative;
 			display: block;
-			padding: 2rem;
+			padding: 2rem 4rem;
+			font-size: 1.8rem;
+			color: $gray-dark;
 			border-bottom: 1px solid $gray-dark;
 
 			@media screen and (min-width: 768px) {
@@ -105,6 +107,7 @@
 			p {
 				color: $gray-dark;
 				margin-bottom: 2rem;
+				font-size: 1.6rem;
 				max-width: 37.5rem;
 			}
 
@@ -124,7 +127,7 @@
 		content: '';
 		position: absolute;
 		display: block;
-		width: 50%;
+		width: 70%;
 		height: 3px;
 		background: $red;
 		bottom: 0;
@@ -142,7 +145,7 @@
 		content: '';
 		position: absolute;
 		display: block;
-		width: 50%;
+		width: 70%;
 		height: 3px;
 		background: $red;
 		bottom: 0;
@@ -160,7 +163,7 @@
 		content: '';
 		position: absolute;
 		display: block;
-		width: 50%;
+		width: 70%;
 		height: 3px;
 		background: $red;
 		bottom: 0;
